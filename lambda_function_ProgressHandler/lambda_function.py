@@ -35,7 +35,7 @@ def lambda_handler(event, context):
                 new_image_values = {key: value['S'] for key, value in new_image.items()}
 
                 # Show the value of 'response' field in NewImage
-                response_value = new_image_values.get('response')
+                response_value = new_image_values.get('supportresponse')
                 username_value = new_image_values.get('username')
                 whatsappif_value = new_image_values.get('whatsappid')
                 progress_value = new_image_values.get('progress')
