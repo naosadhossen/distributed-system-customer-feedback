@@ -21,7 +21,8 @@ def send_whatsapp(text_message, recepient):
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
                 body=response_message,
-                to=f'whatsapp:{whatsappid}'
+                to=f'whatsapp:{whatsappid}',
+                attempt=10
             )
             print("WhatsApp message sent successfully.")
             break  # Exit the loop if message sent successfully
